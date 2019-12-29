@@ -65,6 +65,29 @@ Then on your component, simply declare it like any other ngModule:
 
 I use it on top of my apps main router outlet, but it can be declared anywhere. 
 
+Another useful feature this library provides is an Injection token for the browser window. It provides a safe way of 
+interacting with the browser window read more [here](https://brianflove.com/2018/01/11/angular-window-provider/). 
+
+You can use the token like so: 
+
+```TypeScript
+
+@Component(...)
+export class DemoClass implements OnInit {
+    
+    private _window: Window;
+    
+    constructor(@Inject(WINDOW) window: Window) {
+        this._window = window;
+    }
+
+    public ngOnInit(): void {
+        /** Add an event listener*/
+        this._window.addEventListneer('orientationchange', () => ...)
+    }
+}
+```
+
 ### Demo: 
 
 You can see a live version of this working over at [my blog](https://marcfreemandev.web.app/home)
