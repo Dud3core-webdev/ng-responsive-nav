@@ -1,0 +1,60 @@
+@import "mixins/keyframes_mixin";
+
+@include keyframes(slide-burger-right) {
+  to {
+    right: 29%;
+    margin: 18px 0 0 0;
+    background-color: transparent;
+    color: #1976D2;
+  }
+}
+
+@include keyframes(slide-burger-left) {
+  from {
+    right: 29%;
+  }
+  to {
+    right: 68%;
+  }
+}
+
+@include keyframes(animation-slide-in-nav-left) {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 25%;
+  }
+}
+
+@include keyframes(animation-slide-in-left) {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@include keyframes(animation-slide-out-nav-right) {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@include keyframes(fade-in) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(rotate-clockwise) {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}

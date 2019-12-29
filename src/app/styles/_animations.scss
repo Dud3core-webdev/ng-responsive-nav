@@ -1,0 +1,23 @@
+@import "mixins/animations_mixin";
+@import "animation-keyframes";
+
+.animation-slide-burger-right {
+  @include animation('slide-burger-right 200ms');
+  animation-fill-mode: forwards;
+  animation-delay: 75ms;
+}
+
+.animation-slide-burger-left {
+  @include animation('slide-burger-left 200ms');
+  animation-fill-mode: forwards;
+}
+
+.animation-slide-in-nav-menu {
+  @include animation('animation-slide-in-nav-left 200ms');
+  animation-fill-mode: forwards;
+}
+
+.animation-slide-out-nav-menu {
+  @include animation('animation-slide-out-nav-right 200ms');
+  animation-fill-mode: forwards;
+}

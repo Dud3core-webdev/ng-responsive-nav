@@ -1,0 +1,32 @@
+<div class="mobile-navigation-burger-menu-button circle-container"
+     [ngStyle]="{ 'background-color': !canActivateMobileNav ? navConfig.navColourConfig.primary : navConfig.navColourConfig.secondary }"
+     (click)="toggleCanActivateMobileNavBar()"
+     [class.animation-slide-burger-right]="canActivateMobileNav"
+     [class.animation-slide-burger-left]="!canActivateMobileNav" >
+
+  <i *ngIf="!canActivateMobileNav" [ngStyle]="{ 'color': navConfig.navColourConfig.secondary }"><fa-icon [icon]="faBars"></fa-icon></i>
+  <i *ngIf="canActivateMobileNav"  [ngStyle]="{ 'color': navConfig.navColourConfig.primary }"><fa-icon [icon]="faTimes"></fa-icon></i>
+</div>
+
+<div appCheckOrientation class="mobile-navigation-menu" *ngIf="canActivateMobileNav">
+  <div class="mobile-navigation-menu-items"
+       [ngStyle]="{ 'background-color': navConfig.navColourConfig.secondary }"
+       [class.animation-slide-in-nav-menu]="canActivateMobileNav"
+       [class.animation-slide-out-nav-menu]="!canActivateMobileNav">
+
+    <div class="mobile-navigation-button-runner"
+         [ngStyle]="{ 'background-color': navConfig.navColourConfig.primary }"
+         *ngIf="canActivateMobileNav">
+      <div class="runner-inner"></div>
+    </div>
+
+    <div class="mobile-navigation-links">
+      <div class="mobile-navigation-links-inner">
+        <img class="mobile-navigation-inner-icon"
+             [routerLink]="navConfig.navigationHomeRoute.routePath"
+             [src]="navConfig.navColourConfig.brandImageUrl" />
+      </div>
+      <a *ngFor="let route of navConfig.navigationMenuRoutes" [routerLink]="route.routePath">{{route.routeName}}</a>
+    </div>
+  </div>
+</div>

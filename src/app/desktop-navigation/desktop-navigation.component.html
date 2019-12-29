@@ -1,0 +1,18 @@
+<div class="navigation-container"
+     [ngStyle]="{ 'background-color': navConfig.navColourConfig.secondary ? navConfig.navColourConfig.secondary : 'white' }">
+  <div class="navigation-inner-container">
+    <div class="navigation-links">
+      <img class="navigation-image"
+           [routerLink]="navConfig.navigationHomeRoute.routePath"
+           [src]="navConfig.navColourConfig.brandImageUrl">
+      <a class="link primary"
+         *ngFor="let route of navConfig.navigationMenuRoutes"
+         [routerLink]="route.routePath">{{route.routeName}}</a>
+    </div>
+    <div class="navigation-extras">
+      <button class="pill-button">
+        Contact Me!
+      </button>
+    </div>
+  </div>
+</div>

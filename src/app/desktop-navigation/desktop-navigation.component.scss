@@ -1,0 +1,44 @@
+.navigation-container {
+
+  @media only screen and (max-width: 576px) {
+    display: none;
+  }
+
+  height: 64px;
+  position: fixed;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+  .navigation-inner-container {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+    height: 100%;
+
+    .navigation-links {
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -ms-flex-align: center !important;
+      align-items: center !important;
+      height: 100%;
+
+      .navigation-image {
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .navigation-extras {
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -ms-flex-align: center !important;
+      align-items: center !important;
+      height: 100%;
+
+      padding-right: 1rem;
+    }
+  }
+}
