@@ -1,9 +1,5 @@
 @import "../styles/animations";
 
-.z-index-zero {
-  z-index: 1 !important;
-}
-
 .mobile-navigation-burger-menu-button {
 
   @media only screen and (min-width: 576px) {
@@ -38,6 +34,7 @@
   z-index: 1;
 
   .mobile-navigation-menu-items {
+    box-shadow: 7px 4px 12px -8px rgba(0,0,0,0.75);
     width: 75%;
     height: 100%;
     z-index: 1;
