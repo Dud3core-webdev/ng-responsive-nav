@@ -6,6 +6,10 @@ This library is for use with Angular 8 only, as I haven't tested it in older ver
 
 ## Installation
 
+Use NPM to install this pckage
+
+```npm i ng-responsive-nav```
+
 ## How To Use
 The navigation menu comes with a configuration object that is then used to style and populate the menu with route paths. 
 
