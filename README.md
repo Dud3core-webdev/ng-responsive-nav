@@ -6,7 +6,7 @@ This library is for use with Angular 8 only, as I haven't tested it in older ver
 
 ## Installation
 
-Use NPM to install this pckage
+Use NPM to install this package
 
 ```npm i ng-responsive-nav```
 
