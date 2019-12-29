@@ -1,6 +1,6 @@
 {
   "name": "ng-responsive-nav",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
@@ -10,7 +10,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0"
   },
-  "description": "This is a fully responsive navigation menu solution. It comes with a desktop navigation menu and collapses into a mobile burger menu. This library is for use with Angular 8 only, as I haven't tested it in older versions of Angular (or 9). It has minimal dependencies, no Bootstrap, just Angular, HTML, SCSS and the amazing [Font Awesome Angular Module](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)",
+  "description": "A mobile friendly navigation solution",
   "main": "karma.conf.js",
   "devDependencies": {},
   "scripts": {

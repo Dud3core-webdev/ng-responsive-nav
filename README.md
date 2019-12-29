@@ -68,3 +68,15 @@ I use it on top of my apps main router outlet, but it can be declared anywhere.
 ### Demo: 
 
 You can see a live version of this working over at [my blog](https://marcfreemandev.web.app/home)
+
+### Future Plans
+
+There's still a lot of things I'd like to do with this library
+
+1. Using the RouterModule rather than custom routes in forRoot. 
+2. Custom SVGs to completely remove dependencies from the library.
+3. Deeper customisation, using content transclusion.
+4. Unit and E2E tests, I want 100% coverage.
+
+### Bugs 
+You can report any bugs over at the [GitHub Repository](https://github.com/Dudecor3/ng-responsive-nav) and I'll get on them right away.
