@@ -154,6 +154,26 @@ To Add the extra content, you can do so like this:
 ```
 The content will appear at the bottom of the mobile navigation menu
 
+## Customising both
+
+You can customise both of the navigation menus at the same time, it will look something like this 
+
+```html
+<ng-responsive-nav>
+  <div ngDesktopNavExtras>
+    <button>Test button</button>
+  </div>
+
+  <div ngMobileNavExtras>
+    <div style="color: black">
+      <h1>Hello</h1>
+    </div>
+  </div>
+</ng-responsive-nav>
+```
+
+and it will apply to the correct menu.
+
 ## WINDOW Provider
 
 Another useful feature this library provides is an Injection token for the browser window. It provides a safe way of 
