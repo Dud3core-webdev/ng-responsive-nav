@@ -4,8 +4,10 @@
      [class.animation-slide-burger-right]="canActivateMobileNav"
      [class.animation-slide-burger-left]="!canActivateMobileNav" >
 
-  <i *ngIf="!canActivateMobileNav" [ngStyle]="{ 'color': navConfig.navColourConfig.secondary }"><fa-icon [icon]="faBars"></fa-icon></i>
-  <i *ngIf="canActivateMobileNav"  [ngStyle]="{ 'color': navConfig.navColourConfig.primary }"><fa-icon [icon]="faTimes"></fa-icon></i>
+  <div class="mobile-navigation-burger-menu-button-inner">
+    <fa-icon class="icon" *ngIf="!canActivateMobileNav" [ngStyle]="{ 'color': navConfig.navColourConfig.secondary }" [icon]="faBars"></fa-icon>
+    <fa-icon class="icon" *ngIf="canActivateMobileNav"  [ngStyle]="{ 'color': navConfig.navColourConfig.primary }" [icon]="faTimes"></fa-icon>
+  </div>
 </div>
 
 <div appCheckOrientation class="mobile-navigation-menu" *ngIf="canActivateMobileNav">
