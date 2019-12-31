@@ -10,7 +10,8 @@ Angular library was required to use the package. This was due to the way exports
 managed in public-api.ts
 
 * Improved css for nav-links: At the time of upload, there were no css rules being applied to url links
-* Started work to make the desktop nav more customisable through content transclusion. 
+* Allowed for further customisation of Desktop nav through the use of ng-content
+* Started work on the same but for mobile nav.
 
 ## Installation
 
@@ -113,6 +114,31 @@ Then on your component, simply declare it like any other ngModule:
 ```
 
 I use it on top of my apps main router outlet, but it can be declared anywhere. 
+
+## Customising Desktop Nav
+This is a feature that allows you to add extra content on the desktop nav bar. This can be something like a CTA button for 
+login, etc. 
+
+To Add the extra content, you can do so like this: 
+
+```html
+<!-- Declare the ng-responsive-nav -->
+
+<ng-responsive-nav>
+    <!-- ngDesktopExtras is the selector used  -->
+    <!-- the extra content -->
+  <div ngDesktopNavExtras>
+    <button>Test button</button>
+  </div>
+
+</ng-responsive-nav>
+```
+
+And it will appear on the right hand side of the menu like the image below: 
+
+<img src="https://firebasestorage.googleapis.com/v0/b/marcfreemandev.appspot.com/o/blog-posts%2Fimage%201.png?alt=media&token=693308cc-c9e9-485c-b532-5f66d9eb1241" />
+
+## WINDOW Provider
 
 Another useful feature this library provides is an Injection token for the browser window. It provides a safe way of 
 interacting with the browser window read more [here](https://brianflove.com/2018/01/11/angular-window-provider/). 
