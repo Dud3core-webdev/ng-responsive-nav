@@ -15,6 +15,17 @@
       }
     }
   }
+
+  &.mobile-link {
+    margin: 7px 0;
+
+    &.primary {
+
+      &:active {
+        filter: brightness(60%);
+      }
+    }
+  }
 }
 
 .display-flex {

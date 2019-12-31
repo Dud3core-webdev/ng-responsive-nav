@@ -3,4 +3,9 @@
     <ng-content select="[ngDesktopNavExtras]"></ng-content>
   </div>
 </app-desktop-navigation>
-<app-mobile-navigation-component></app-mobile-navigation-component>
+
+<app-mobile-navigation-component>
+  <div mobileExtras>
+    <ng-content select="[ngMobileNavExtras]"></ng-content>
+  </div>
+</app-mobile-navigation-component>

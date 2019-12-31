@@ -11,7 +11,7 @@ managed in public-api.ts
 
 * Improved css for nav-links: At the time of upload, there were no css rules being applied to url links
 * Allowed for further customisation of Desktop nav through the use of ng-content
-* Started work on the same but for mobile nav.
+* Allowed for further customisation of Mobile nav through the use of ng-content.
 
 ## Installation
 
@@ -136,7 +136,23 @@ To Add the extra content, you can do so like this:
 
 And it will appear on the right hand side of the menu like the image below: 
 
-<img src="https://firebasestorage.googleapis.com/v0/b/marcfreemandev.appspot.com/o/blog-posts%2Fimage%201.png?alt=media&token=693308cc-c9e9-485c-b532-5f66d9eb1241" />
+## Customising Mobile Nav
+This is a feature that allows you to add extra content on the desktop nav bar. This can be something like a CTA button for 
+login, etc. 
+
+To Add the extra content, you can do so like this: 
+
+```html
+<!-- Declare the ng-responsive-nav -->
+<ng-responsive-nav>
+  <div ngMobileNavExtras>
+    <div style="color: black">
+      <h1>Hello</h1>
+    </div>
+  </div>
+</ng-responsive-nav>
+```
+The content will appear at the bottom of the mobile navigation menu
 
 ## WINDOW Provider
 

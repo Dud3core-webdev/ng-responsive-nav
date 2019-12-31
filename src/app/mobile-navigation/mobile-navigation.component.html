@@ -28,7 +28,15 @@
              [routerLink]="navConfig.navigationHomeRoute.routePath"
              [src]="navConfig.navColourConfig.brandImageUrl" />
       </div>
-      <a *ngFor="let route of navConfig.navigationMenuRoutes" [routerLink]="route.routePath">{{route.routeName}}</a>
+      <a class="link mobile-link"
+         *ngFor="let route of navConfig.navigationMenuRoutes"
+         [routerLink]="route.routePath"
+         [ngStyle]="{ 'color': navConfig.navColourConfig.primary }">{{route.routeName}}</a>
     </div>
+
+    <div class="mobile-navigation-extras">
+      <ng-content select="[mobileExtras]"></ng-content>
+    </div>
+
   </div>
 </div>
