@@ -137,8 +137,8 @@ To Add the extra content, you can do so like this:
 And it will appear on the right hand side of the menu like the image below: 
 
 ## Customising Mobile Nav
-This is a feature that allows you to add extra content on the desktop nav bar. This can be something like a CTA button for 
-login, etc. 
+This works the same way as Desktop only this time, the content selector is 
+```ngMobileNavExtras```
 
 To Add the extra content, you can do so like this: 
 
