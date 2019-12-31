@@ -5,14 +5,13 @@
       <img class="navigation-image"
            [routerLink]="navConfig.navigationHomeRoute.routePath"
            [src]="navConfig.navColourConfig.brandImageUrl">
-      <a class="link primary"
+      <a class="link desktop-link primary"
+         [ngStyle]="{ 'color': navConfig.navColourConfig.primary }"
          *ngFor="let route of navConfig.navigationMenuRoutes"
          [routerLink]="route.routePath">{{route.routeName}}</a>
     </div>
     <div class="navigation-extras">
-      <button class="pill-button">
-        Contact Me!
-      </button>
+      <ng-content select="div[role=desktop-extras]"></ng-content>
     </div>
   </div>
 </div>

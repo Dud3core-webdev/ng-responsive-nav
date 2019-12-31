@@ -1,0 +1,18 @@
+.link {
+
+  &.desktop-link {
+    margin: 0 7px;
+    &.primary {
+      text-decoration: none;
+
+      &:hover {
+        filter: brightness(60%);
+        text-decoration: underline;
+      }
+
+      &:active {
+        filter: brightness(60%);
+      }
+    }
+  }
+}
