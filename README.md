@@ -4,6 +4,14 @@ This is a fully responsive navigation menu solution. It comes with a desktop nav
 This library is for use with Angular 8 only, as I haven't tested it in older versions of Angular (or 9). It has minimal dependencies, no Bootstrap, just Angular, HTML, SCSS and the amazing
 [Font Awesome Angular Module](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
 
+#### Recent Improvements
+* Fixed issue where this just didn't work as an NPM package, a built version of the 
+Angular library was required to use the package. This was due to the way exports were being 
+managed in public-api.ts
+
+* Improved css for nav-links: At the time of upload, there were no css rules being applied to url links
+* Started work to make the desktop nav more customisable through content transclusion. 
+
 ## Installation
 
 You will need to have the following packages in your Angular app's package.json file: 
