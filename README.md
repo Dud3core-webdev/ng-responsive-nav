@@ -4,13 +4,47 @@ This is a fully responsive navigation menu solution. It comes with a desktop nav
 This library is for use with Angular 8 only, as I haven't tested it in older versions of Angular (or 9). It has minimal dependencies, no Bootstrap, just Angular, HTML, SCSS and the amazing
 [Font Awesome Angular Module](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
 
-# ISSUE!
-I'm currently fixing an issue where this package doesn't seem to work as an NPM package, for now you can pull the code from the repository, build it and it 
-will work... I'll have this fixed soon.
-
 ## Installation
 
-Use NPM to install this package
+You will need to have the following packages in your Angular app's package.json file: 
+
+``` 
+"@fortawesome/angular-fontawesome": "^0.5.0",
+"@fortawesome/fontawesome-svg-core": "^1.2.26",
+"@fortawesome/free-solid-svg-icons": "^5.12.0",
+```
+
+Once you have pasted these into dependencies, like so
+
+```JSON
+{
+  "name": "ng8-responsive-nav-bar-test-bed",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.9",
+    "@angular/common": "~8.2.9",
+    "@angular/compiler": "~8.2.9",
+    "@angular/core": "~8.2.9",
+    ...
+    "@fortawesome/angular-fontawesome": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+  },
+  ...,
+}
+```
+run ```npm i``` to install the depenedencies.
+
+Use NPM to install this navigation menu package
 
 ```npm i ng-responsive-nav```
 
@@ -29,6 +63,9 @@ The object is simple enough. For now the navigation menu can only accept parent 
 To use the navigation Module, you must declare it in app.module (or your shared module) like so: 
 
 ```TypeScript
+
+import { NavConfig, NgResponsiveNavModule } from 'ng-responsive-nav';
+
 const navigationConfig: NavConfig =  {
   navColourConfig: {
     primary: '#1976D2',
@@ -75,6 +112,8 @@ interacting with the browser window read more [here](https://brianflove.com/2018
 You can use the token like so: 
 
 ```TypeScript
+
+import { WINDOW } from 'ng-responsive-nav';
 
 @Component(...)
 export class DemoClass implements OnInit {
