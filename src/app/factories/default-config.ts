@@ -13,7 +13,6 @@ export const defaultConfig: NavConfig = {
     brandImageUrl: 'https://placehold.it/300x300',
     zIndex: 1,
     boxShadow: true,
-    animateBoxShadowOnScroll: false
   },
   navigationHomeRoute: {
     routePath: '/',

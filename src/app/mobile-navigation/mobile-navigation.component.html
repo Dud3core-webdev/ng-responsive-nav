@@ -1,6 +1,6 @@
 <div class="mobile-navigation-burger-menu-button circle-container"
      [ngStyle]="{
-      'background-color': !canActivateMobileNav ? navConfig.navBrandConfig.colorPalette.backGroundColor : '',
+      'background-color': navConfig.navBrandConfig.colorPalette.primaryColor,
       'z-index': navConfig.navBrandConfig.zIndex
      }"
      (click)="toggleCanActivateMobileNavBar()"
@@ -43,3 +43,4 @@
 
   </div>
 </div>
+

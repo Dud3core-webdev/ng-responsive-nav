@@ -1,3 +1,5 @@
+#### Current stable version: 0.1.4
+
 # NgResponsiveNav
 
 This is a fully responsive navigation menu solution. It comes with a desktop navigation menu and collapses into a mobile burger menu.
@@ -12,6 +14,8 @@ managed in public-api.ts
 * Improved css for nav-links: At the time of upload, there were no css rules being applied to url links
 * Allowed for further customisation of Desktop nav through the use of ng-content
 * Allowed for further customisation of Mobile nav through the use of ng-content.
+* Improved the configuration object by allowing a colour palette. 
+* Allowed the choice for box shadow on the desktop navigation
 
 ## Installation
 
@@ -75,36 +79,59 @@ To use the navigation Module, you must declare it in app.module (or your shared 
 
 import { NavConfig, NgResponsiveNavModule } from 'ng-responsive-nav';
 
-const navigationConfig: NavConfig =  {
-  navColourConfig: {
-    primary: '#1976D2',
-    secondary: '#ffffff',
-    brandImageUrl: 'https://placehold.it/300x300'
+export const navConfig: NavConfig = {
+  navBrandConfig: {
+    colorPalette: {
+      primaryColor: '#1976D2',
+      secondaryColor: '#ffffff',
+      linkActiveColor: '#1976D2',
+      linkColor: '#1976D2',
+      tertiaryColor: '#1976D2',
+      backGroundColor: '#ffffff'
+    },
+    brandImageUrl: 'https://placehold.it/300x300',
+    zIndex: 1,
+    boxShadow: true,
   },
   navigationHomeRoute: {
-    routeName: 'home',
-    routePath: ''
+    routePath: '/',
+    routeName: 'home'
   },
-  navigationMenuRoutes: [
-    {
-      routePath: './blog/catalogue',
-      routeName: 'Blog'
-    },
-    {
-      routePath: '',
-      routeName: 'Showcase'
-    }
-  ]
+  navigationMenuRoutes: []
 };
 
 @NgModule({
-  imports: [NgResponsiveNavModule.forRoot(navigationConfig),],
+  imports: [NgResponsiveNavModule.forRoot(navConfig)],
   exports: [NgResponsiveNavModule]
 })
 
 export class SharedModule {}
 
 ```
+
+This library will work without your configuration as it uses a factory to create styles and branding from either you (the user) or 
+a default config object. This object is identical to the one declared in the above markdown. 
+
+The ```forRoot()``` method however, does definitely require a ```NavConfig``` with at least a home route to work. So: 
+
+```javascript
+import { NavConfig, NgResponsiveNavModule } from 'ng-responsive-nav';
+
+const navConfig: NavConfig = {
+  navigationHomeRoute: {
+    routePath: '/',
+    routeName: 'home'
+  },
+  navigationMenuRoutes: []
+};
+
+@NgModule({
+  imports: [NgResponsiveNavModule.forRoot(navConfig)],
+  exports: [NgResponsiveNavModule]
+})
+```
+
+is also valid
 
 Then on your component, simply declare it like any other ngModule: 
 

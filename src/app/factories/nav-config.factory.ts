@@ -23,14 +23,17 @@ export class NavConfigFactory {
     return homeRoute ? homeRoute : defaultConfig.navigationHomeRoute;
   }
 
-  private static _mapBrandConfig(styles: Partial<NavBrandConfig>): NavBrandConfig {
-    return {
-      brandImageUrl: styles.brandImageUrl ? styles.brandImageUrl : defaultConfig.navBrandConfig.brandImageUrl,
-      colorPalette: this._mapColorPalette(styles.colorPalette),
-      zIndex: styles.zIndex ? styles.zIndex : defaultConfig.navBrandConfig.zIndex,
-      boxShadow:  styles.boxShadow ? styles.boxShadow : defaultConfig.navBrandConfig.boxShadow,
-      animateBoxShadowOnScroll: styles.animateBoxShadowOnScroll ? styles.animateBoxShadowOnScroll : defaultConfig.navBrandConfig.animateBoxShadowOnScroll,
-    };
+  private static _mapBrandConfig(styles: NavBrandConfig): NavBrandConfig {
+    if (styles !== undefined) {
+      return {
+        brandImageUrl: styles.brandImageUrl ? styles.brandImageUrl : defaultConfig.navBrandConfig.brandImageUrl,
+        colorPalette: this._mapColorPalette(styles.colorPalette),
+        zIndex: styles.zIndex ? styles.zIndex : defaultConfig.navBrandConfig.zIndex,
+        boxShadow:  (styles.boxShadow === false || styles.boxShadow === true) ? styles.boxShadow : defaultConfig.navBrandConfig.boxShadow,
+      };
+    }
+
+    return defaultConfig.navBrandConfig;
   }
 
   private static _mapColorPalette(colorPalette: Partial<NavColorPalette>): NavColorPalette {

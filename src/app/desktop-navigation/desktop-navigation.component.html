@@ -1,9 +1,9 @@
 <div class="navigation-container"
-    [ngStyle]="{
+     [ngStyle]="{
       'background-color': navConfig.navBrandConfig.colorPalette.backGroundColor,
       'z-index': navConfig.navBrandConfig.zIndex,
-      'box-shadow': !navConfig.navBrandConfig.boxShadow ? '0 0.5rem 1rem rgba(0, 0, 0, 0.15)' : false
-    }">
+      'box-shadow': navConfig.navBrandConfig.boxShadow === true ? '0 0.5rem 1rem rgba(0, 0, 0, 0.15)' : 'none'
+}">
   <div class="navigation-inner-container">
     <div class="navigation-links">
       <img class="navigation-image"

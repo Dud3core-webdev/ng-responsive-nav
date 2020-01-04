@@ -5,5 +5,4 @@ export abstract class NavBrandConfig {
   public readonly brandImageUrl?: string;
   public readonly zIndex?: number;
   public readonly boxShadow?: boolean;
-  public readonly animateBoxShadowOnScroll?: boolean;
 }

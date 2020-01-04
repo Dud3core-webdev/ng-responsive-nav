@@ -36,7 +36,7 @@ const declarations = [
 
 export class NgResponsiveNavModule {
 
-  public static forRoot(navConfig: Partial<NavConfig>): ModuleWithProviders {
+  public static forRoot(navConfig: NavConfig): ModuleWithProviders {
     return {
       ngModule: NgResponsiveNavModule,
       providers: [
