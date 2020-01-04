@@ -1,7 +1,7 @@
 <div class="mobile-navigation-burger-menu-button circle-container"
      [ngStyle]="{
       'background-color': navConfig.navBrandConfig.colorPalette.primaryColor,
-      'z-index': navConfig.navBrandConfig.zIndex
+      'z-index': navConfig.navBrandConfig.zIndex + 1
      }"
      (click)="toggleCanActivateMobileNavBar()"
      [class.animation-slide-burger-right]="canActivateMobileNav"
@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div appCheckOrientation class="mobile-navigation-menu" *ngIf="canActivateMobileNav">
+<div appCheckOrientation class="mobile-navigation-menu" *ngIf="canActivateMobileNav" [ngStyle]="{'z-index': navConfig.navBrandConfig.zIndex}">
   <div class="mobile-navigation-menu-items"
        [ngStyle]="{ 'background-color': navConfig.navBrandConfig.colorPalette.secondaryColor }"
        [class.animation-slide-in-nav-menu]="canActivateMobileNav"
