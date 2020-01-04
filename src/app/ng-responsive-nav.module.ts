@@ -6,9 +6,10 @@ import {DesktopNavigationComponent} from './desktop-navigation/desktop-navigatio
 import {MobileNavigationComponent} from './mobile-navigation/mobile-navigation.component';
 import {OrientationDirective} from './directives/orientation.directive';
 import {WINDOW_PROVIDERS} from './window/browser-window.provider';
-import {NavConfig} from './config/nav.config';
+import {NavConfig} from './models/nav.config';
 import {RouterModule} from '@angular/router';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {NavConfigFactory} from './factories/nav-config.factory';
 
 const declarations = [
   DesktopNavigationComponent,
@@ -25,17 +26,21 @@ const declarations = [
     RouterModule,
     FontAwesomeModule
   ],
-  exports: [NgResponsiveNavComponent],
-  providers: [WINDOW_PROVIDERS]
+  exports: [
+    NgResponsiveNavComponent
+  ],
+  providers: [
+    WINDOW_PROVIDERS
+  ]
 })
 
 export class NgResponsiveNavModule {
 
-  public static forRoot(navConfig: NavConfig): ModuleWithProviders {
+  public static forRoot(navConfig: Partial<NavConfig>): ModuleWithProviders {
     return {
       ngModule: NgResponsiveNavModule,
       providers: [
-        {provide: NavConfig, useValue: navConfig}
+        {provide: NavConfig, useValue: NavConfigFactory.for(navConfig)}
       ]
     };
   }

@@ -12,7 +12,7 @@ export * from './app/window/browser-window.ref';
 export * from './app/window/window.factory';
 
 /** Types */
-export * from './app/config/nav.config';
-export * from './app/config/nav-brand.config';
-export * from './app/config/nav-routes.config';
+export * from './app/models/nav.config';
+export * from './app/models/nav-brand.config';
+export * from './app/models/nav-routes.config';
 

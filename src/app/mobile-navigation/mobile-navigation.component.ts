@@ -2,7 +2,7 @@ import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {DOCUMENT} from '@angular/common';
 import {Subscription} from 'rxjs';
-import {NavConfig} from '../config/nav.config';
+import {NavConfig} from '../models/nav.config';
 import {faBars} from '@fortawesome/free-solid-svg-icons/faBars';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 

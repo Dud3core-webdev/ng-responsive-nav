@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavConfig} from '../config/nav.config';
+import {NavConfig} from '../models/nav.config';
 
 @Component({
   selector: 'app-desktop-navigation',

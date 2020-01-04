@@ -1,15 +1,20 @@
 <div class="navigation-container"
-     [ngStyle]="{ 'background-color': navConfig.navColourConfig.secondary ? navConfig.navColourConfig.secondary : 'white' }">
+    [ngStyle]="{
+      'background-color': navConfig.navBrandConfig.colorPalette.backGroundColor,
+      'z-index': navConfig.navBrandConfig.zIndex,
+      'box-shadow': !navConfig.navBrandConfig.boxShadow ? '0 0.5rem 1rem rgba(0, 0, 0, 0.15)' : false
+    }">
   <div class="navigation-inner-container">
     <div class="navigation-links">
       <img class="navigation-image"
            [routerLink]="navConfig.navigationHomeRoute.routePath"
-           [src]="navConfig.navColourConfig.brandImageUrl">
+           [src]="navConfig.navBrandConfig.brandImageUrl">
       <a class="link desktop-link primary"
-         [ngStyle]="{ 'color': navConfig.navColourConfig.primary }"
+         [ngStyle]="{ 'color': navConfig.navBrandConfig.colorPalette.linkColor }"
          *ngFor="let route of navConfig.navigationMenuRoutes"
          [routerLink]="route.routePath">{{route.routeName}}</a>
     </div>
+
     <div class="navigation-extras">
       <ng-content select="[desktopExtras]"></ng-content>
     </div>
