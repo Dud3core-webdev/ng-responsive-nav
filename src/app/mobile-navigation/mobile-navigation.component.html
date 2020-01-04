@@ -7,15 +7,15 @@
      [class.animation-slide-burger-right]="canActivateMobileNav"
      [class.animation-slide-burger-left]="!canActivateMobileNav" >
 
-  <div class="mobile-navigation-burger-menu-button-inner">
-    <fa-icon class="icon" *ngIf="!canActivateMobileNav" [ngStyle]="{ 'color': navConfig.navBrandConfig.colorPalette.secondaryColor }" [icon]="faBars"></fa-icon>
+  <div class="mobile-navigation-burger-menu-button-inner" [ngStyle]="{'z-index': navConfig.navBrandConfig.zIndex + 1}">
+    <fa-icon class="icon" *ngIf="!canActivateMobileNav"  [ngStyle]="{ 'color': navConfig.navBrandConfig.colorPalette.secondaryColor }" [icon]="faBars"></fa-icon>
     <fa-icon class="icon" *ngIf="canActivateMobileNav" [ngStyle]="{ 'color': navConfig.navBrandConfig.colorPalette.primaryColor }" [icon]="faTimes"></fa-icon>
   </div>
 </div>
 
 <div appCheckOrientation class="mobile-navigation-menu" *ngIf="canActivateMobileNav" [ngStyle]="{'z-index': navConfig.navBrandConfig.zIndex}">
   <div class="mobile-navigation-menu-items"
-       [ngStyle]="{ 'background-color': navConfig.navBrandConfig.colorPalette.secondaryColor }"
+       [ngStyle]="{ 'background-color': navConfig.navBrandConfig.colorPalette.backGroundColor }"
        [class.animation-slide-in-nav-menu]="canActivateMobileNav"
        [class.animation-slide-out-nav-menu]="!canActivateMobileNav">
 

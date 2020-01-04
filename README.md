@@ -1,4 +1,4 @@
-#### Current stable version: 0.1.4
+#### Current stable version: 0.1.7
 
 # NgResponsiveNav
 
